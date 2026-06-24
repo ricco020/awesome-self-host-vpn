@@ -4,7 +4,7 @@
 
 Self-hosting a VPN gives you complete control of the server, the logs (or absence of them), and the cost (~5€/month on a VPS vs ~3€/month on a commercial subscription with way more limits). This list collects everything needed to **deploy, harden and monitor** a self-hosted VPN reliably.
 
-Maintained by [VPNSmith](https://www.vpnsmith.com) — independent tutorials and benchmarks for self-hosted VPN on VPS.
+Maintained by [VPNSmith](https://www.vpnsmith.com) — independent tutorials for self-hosted VPN on VPS.
 
 ## Contents
 
@@ -26,15 +26,13 @@ Maintained by [VPNSmith](https://www.vpnsmith.com) — independent tutorials and
 
 ## VPN protocols
 
-| Protocol | Year | Cipher | Audited | Speed (vs raw) | Use case |
-|----------|------|--------|---------|----------------|----------|
-| [WireGuard](https://www.wireguard.com/) | 2016 | ChaCha20-Poly1305 | Cure53 (2018), Trail of Bits (2020) | -4% | Default modern choice |
-| [OpenVPN](https://openvpn.net/community/) | 2001 | AES-GCM (configurable) | Multiple audits 2004-2024 | -27% UDP, -59% TCP | TCP-only environments, port 443 obfuscation |
-| [IPsec](https://strongswan.org/) | 1995 | AES, ChaCha20 | Heavy | -8 to -15% | Enterprise, site-to-site, IKEv2 mobile |
-| [OpenConnect](https://www.infradead.org/openconnect/) | 2008 | AES-GCM | Active | -20% | Cisco AnyConnect compatibility |
-| [SoftEther](https://www.softether.org/) | 2014 | AES-256 | Limited | -30% | Multi-protocol gateway |
-
-Per-protocol benchmark on Contabo VPS: see [VPNSmith WireGuard vs OpenVPN 100-run iperf3 study](https://www.vpnsmith.com/en/blog/wireguard-vs-openvpn-vps-benchmarks-2026) (Zenodo DOI `10.5281/zenodo.20512442`).
+| Protocol | Year | Cipher | Audited | Use case |
+|----------|------|--------|---------|----------|
+| [WireGuard](https://www.wireguard.com/) | 2016 | ChaCha20-Poly1305 | Cure53 (2018), Trail of Bits (2020) | Default modern choice |
+| [OpenVPN](https://openvpn.net/community/) | 2001 | AES-GCM (configurable) | Multiple audits 2004-2024 | TCP-only environments, port 443 obfuscation |
+| [IPsec](https://strongswan.org/) | 1995 | AES, ChaCha20 | Heavy | Enterprise, site-to-site, IKEv2 mobile |
+| [OpenConnect](https://www.infradead.org/openconnect/) | 2008 | AES-GCM | Active | Cisco AnyConnect compatibility |
+| [SoftEther](https://www.softether.org/) | 2014 | AES-256 | Limited | Multi-protocol gateway |
 
 ## VPS hosting providers
 
@@ -97,7 +95,6 @@ Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpn
 
 ## Benchmarks & studies
 
-- [VPNSmith — WireGuard vs OpenVPN 100-run iperf3 benchmark 2026](https://www.vpnsmith.com/en/blog/wireguard-vs-openvpn-vps-benchmarks-2026) — Contabo VPS Paris → Nuremberg, reproducible CSV, Zenodo DOI `10.5281/zenodo.20512442`
 - [Phoronix VPN benchmarks](https://www.phoronix.com/scan.php?page=search&q=wireguard) — long-running open benchmark series
 
 ## Multi-peer / mesh VPN
