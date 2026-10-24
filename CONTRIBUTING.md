@@ -18,7 +18,7 @@ Thanks for considering a contribution.
 
 ## Inclusion criteria
 
-- **Directly related** to self-hosting a VPN (not commercial VPN service reviews — those belong elsewhere).
+- **Directly related** to self-hosting a VPN (not commercial VPN service reviews, those belong elsewhere).
 - **Reproducible** : a reader should be able to install/run/follow without paywall.
 - **Active or seminal** : actively maintained (last release < 2 years) OR documentation that is the canonical reference.
 - **No affiliate spam** : VPS providers are listed objectively. Affiliate disclosures, when applicable, belong on the linked tutorial pages, not in this list.
@@ -33,7 +33,7 @@ Thanks for considering a contribution.
 
 - Keep one line per entry.
 - Use the existing table or bullet format of each section.
-- Link directly to source code, documentation, or published article — not to home pages when possible.
+- Link directly to source code, documentation, or published article: not to home pages when possible.
 
 ## License of contributions
 
