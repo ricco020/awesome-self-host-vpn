@@ -4,7 +4,7 @@
 
 Self-hosting a VPN gives you complete control of the server, the logs (or absence of them), and the cost (~5€/month on a VPS vs ~3€/month on a commercial subscription with way more limits). This list collects everything needed to **deploy, harden and monitor** a self-hosted VPN reliably.
 
-Maintained by [VPNSmith](https://www.vpnsmith.com), independent tutorials for self-hosted VPN on VPS.
+Maintained by [VPNSmith](https://www.vpnsmith.com?src=github&ref=gh-awesome-self-host), independent tutorials for self-hosted VPN on VPS.
 
 ## Contents
 
@@ -47,13 +47,13 @@ Providers known to allow VPN traffic (not all do, check ToS):
 | [DigitalOcean](https://www.digitalocean.com) | Global | $4/mo | 500 GB-4 TB | ✅ ToS-allowed |
 | [Linode (Akamai)](https://www.linode.com) | Global | $5/mo | 1-11 TB | ✅ ToS-allowed |
 
-Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpnsmith.com/fr/blog/contabo-vs-hetzner-vs-ovh-vps-vpn-2026).
+Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpnsmith.com/fr/blog/contabo-vs-hetzner-vs-ovh-vps-vpn-2026?src=github&ref=gh-awesome-self-host).
 
 ## Setup tutorials
 
 ### WireGuard
 
-- [VPNSmith, Self-host WireGuard on Contabo step by step (Ubuntu 22.04)](https://www.vpnsmith.com/en/blog/self-host-vpn-contabo-wireguard-2026), complete walkthrough with firewall, DNS, and kill-switch
+- [VPNSmith, Self-host WireGuard on Contabo step by step (Ubuntu 22.04)](https://www.vpnsmith.com/en/blog/self-host-vpn-contabo-wireguard-2026?src=github&ref=gh-awesome-self-host), complete walkthrough with firewall, DNS, and kill-switch
 - [WireGuard official quickstart](https://www.wireguard.com/quickstart/), minimal config
 - [Algo VPN](https://github.com/trailofbits/algo), automated Ansible playbook for WireGuard + IPsec
 - [pivpn](https://github.com/pivpn/pivpn), interactive installer for Raspberry Pi / Ubuntu
@@ -72,19 +72,19 @@ Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpn
 
 | Source | Notes |
 |--------|-------|
-| [VPNSmith config templates](https://www.vpnsmith.com/en/blog/wireguard-config-templates-2026) | Server + client examples for home VPN, travel VPN, kill-switch strict, multi-peer |
+| [VPNSmith config templates](https://www.vpnsmith.com/en/blog/wireguard-config-templates-2026?src=github&ref=gh-awesome-self-host) | Server + client examples for home VPN, travel VPN, kill-switch strict, multi-peer |
 | [WireGuard wiki - example configs](https://www.wireguard.com/quickstart/) | Minimal upstream examples |
 | [Awesome WireGuard configs](https://github.com/awesome-wireguard/configs) | Community curated configs |
 
 ## Kill switches
 
-- [VPNSmith, Linux VPN kill switch with iptables + systemd](https://www.vpnsmith.com/en/blog/vpn-killswitch-linux-iptables-systemd), production-grade systemd-ordered drop policy
+- [VPNSmith, Linux VPN kill switch with iptables + systemd](https://www.vpnsmith.com/en/blog/vpn-killswitch-linux-iptables-systemd?src=github&ref=gh-awesome-self-host), production-grade systemd-ordered drop policy
 - [killswitch (script)](https://github.com/Nyr/killswitch), minimal bash kill-switch
 
 ## Monitoring & observability
 
 - [wireguard_exporter](https://github.com/mindflavor/prometheus_wireguard_exporter), Prometheus exporter for WireGuard peers
-- [VPNSmith, Monitor your VPS VPN with Prometheus + Grafana](https://www.vpnsmith.com/en/blog/vps-vpn-monitoring-prometheus-grafana), full dashboard + alerts setup
+- [VPNSmith, Monitor your VPS VPN with Prometheus + Grafana](https://www.vpnsmith.com/en/blog/vps-vpn-monitoring-prometheus-grafana?src=github&ref=gh-awesome-self-host), full dashboard + alerts setup
 
 ## Hardening guides
 
@@ -122,7 +122,7 @@ Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpn
 ## Useful CLIs / scripts
 
 - [wg-quick](https://git.zx2c4.com/wireguard-tools/about/), official WireGuard config helper (`wg-quick up wg0`)
-- [VPNSmith split-tunnel ip-route scripts](https://www.vpnsmith.com/en/blog/split-tunnel-vpn-routing-tables), fwmark-based application routing
+- [VPNSmith split-tunnel ip-route scripts](https://www.vpnsmith.com/en/blog/split-tunnel-vpn-routing-tables?src=github&ref=gh-awesome-self-host), fwmark-based application routing
 - [easyrsa](https://github.com/OpenVPN/easy-rsa), OpenVPN PKI tool
 
 ## Communities
