@@ -17,6 +17,7 @@ Maintained by [VPNSmith](https://www.vpnsmith.com?src=github&ref=gh-awesome-self
 - [Hardening guides](#hardening-guides)
 - [Benchmarks & studies](#benchmarks--studies)
 - [Multi-peer / mesh VPN](#multi-peer--mesh-vpn)
+- [Web dashboards for WireGuard](#web-dashboards-for-wireguard)
 - [Mobile clients](#mobile-clients)
 - [Bypassing DPI / restrictive firewalls](#bypassing-dpi--restrictive-firewalls)
 - [Useful CLIs / scripts](#useful-clis--scripts)
@@ -100,6 +101,20 @@ Pricing and RAM/CPU comparison for a VPN workload: [VPNSmith VPS comparator](htt
 - [Nebula](https://github.com/slackhq/nebula), Slack's mesh VPN, P2P routing
 - [Netmaker](https://github.com/gravitl/netmaker), open-source WireGuard mesh
 - [innernet](https://github.com/tonarino/innernet), private mesh VPN by Tonari
+
+## Web dashboards for WireGuard
+
+Plain WireGuard has no user interface: every peer is a block of text in `wg0.conf` and a key pair you generate by hand. These tools manage peers, addresses and client configs for you. Pick by where the keys live.
+
+| Tool | Runs where | Keys stored | Notes |
+|------|-----------|-------------|-------|
+| [wg-easy](https://github.com/wg-easy/wg-easy) | Docker on your server, next to WireGuard | your server | AGPL-3.0, web admin, QR codes, actively maintained |
+| [wg-portal](https://github.com/h44z/wg-portal) | your server (Go binary or Docker) | your server | MIT, LDAP / Active Directory login, several interfaces |
+| [wireguard-ui](https://github.com/ngoduykhanh/wireguard-ui) | your server (Go binary or Docker) | your server | MIT, writes `wg0.conf`, few commits since August 2024 |
+| [PiVPN](https://github.com/pivpn/pivpn) | Raspberry Pi or Debian server | your server | MIT, command line only (`pivpn add`), no web UI |
+| [WireGuard Manager](https://wg.vpnsmith.com/?ref=gh-awesome-self-host) (ours, by VPNSmith) | hosted, nothing to install | hosted, encrypted at rest | several servers in one account, next free IP per peer, `.conf` and QR download, imports an existing `wg0.conf`, free for 1 server and 3 peers, paid plan for more |
+
+If you do not want a third party to hold private keys, use one of the self-hosted dashboards above.
 
 ## Mobile clients
 
