@@ -2,7 +2,7 @@
 
 > A curated list of open-source tools, methodologies, configurations, benchmarks and resources for **self-hosting your own VPN** on a VPS, WireGuard, OpenVPN, kill-switches, multi-peer, monitoring.
 
-Self-hosting a VPN gives you complete control of the server, the logs (or absence of them), and the cost (~5€/month on a VPS vs ~3€/month on a commercial subscription with way more limits). This list collects everything needed to **deploy, harden and monitor** a self-hosted VPN reliably.
+Self-hosting a VPN gives you control of the server, of the logs (or their absence) and of the exit IP, at the price of doing the maintenance yourself. This list collects everything needed to **deploy, harden and monitor** a self-hosted VPN reliably.
 
 Maintained by [VPNSmith](https://www.vpnsmith.com?src=github&ref=gh-awesome-self-host), independent tutorials for self-hosted VPN on VPS.
 
@@ -26,28 +26,26 @@ Maintained by [VPNSmith](https://www.vpnsmith.com?src=github&ref=gh-awesome-self
 
 ## VPN protocols
 
-| Protocol | Year | Cipher | Audited | Use case |
-|----------|------|--------|---------|----------|
-| [WireGuard](https://www.wireguard.com/) | 2016 | ChaCha20-Poly1305 | Cure53 (2018), Trail of Bits (2020) | Default modern choice |
-| [OpenVPN](https://openvpn.net/community/) | 2001 | AES-GCM (configurable) | Multiple audits 2004-2024 | TCP-only environments, port 443 obfuscation |
-| [IPsec](https://strongswan.org/) | 1995 | AES, ChaCha20 | Heavy | Enterprise, site-to-site, IKEv2 mobile |
-| [OpenConnect](https://www.infradead.org/openconnect/) | 2008 | AES-GCM | Active | Cisco AnyConnect compatibility |
-| [SoftEther](https://www.softether.org/) | 2014 | AES-256 | Limited | Multi-protocol gateway |
+| Protocol | Year | Cipher | Use case |
+|----------|------|--------|----------|
+| [WireGuard](https://www.wireguard.com/) | 2016 | ChaCha20-Poly1305 | Default modern choice |
+| [OpenVPN](https://openvpn.net/community/) | 2001 | AES-GCM (configurable) | TCP-only environments, port 443 obfuscation |
+| [IPsec](https://strongswan.org/) | 1995 | AES, ChaCha20 | Enterprise, site-to-site, IKEv2 mobile |
+| [OpenConnect](https://www.infradead.org/openconnect/) | 2008 | AES-GCM | Cisco AnyConnect compatibility |
+| [SoftEther](https://www.softether.org/) | 2014 | AES-256 | Multi-protocol gateway |
 
 ## VPS hosting providers
 
-Providers known to allow VPN traffic (not all do, check ToS):
+Check each provider's terms of service before running a VPN, and its current price page (prices and bandwidth change often):
 
-| Provider | Region | Price floor | Bandwidth | VPN-friendly |
-|----------|--------|-------------|-----------|--------------|
-| [Contabo](https://contabo.com) | EU/US | €4.50/mo | Unmetered (200 Mbps fair use) | ✅ explicit |
-| [Hetzner](https://www.hetzner.com) | EU/US | €4.51/mo | 20 TB included | ✅ ToS-allowed |
-| [OVH](https://www.ovhcloud.com) | EU | €3.50/mo | Unlimited | ✅ ToS-allowed |
-| [Vultr](https://www.vultr.com) | Global | $5/mo | 1-2 TB | ✅ explicit |
-| [DigitalOcean](https://www.digitalocean.com) | Global | $4/mo | 500 GB-4 TB | ✅ ToS-allowed |
-| [Linode (Akamai)](https://www.linode.com) | Global | $5/mo | 1-11 TB | ✅ ToS-allowed |
+- [Contabo](https://contabo.com)
+- [Hetzner](https://www.hetzner.com)
+- [OVHcloud](https://www.ovhcloud.com)
+- [Vultr](https://www.vultr.com)
+- [DigitalOcean](https://www.digitalocean.com)
+- [Linode (Akamai)](https://www.linode.com)
 
-Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpnsmith.com/fr/blog/contabo-vs-hetzner-vs-ovh-vps-vpn-2026?src=github&ref=gh-awesome-self-host).
+Pricing and RAM/CPU comparison for a VPN workload: [VPNSmith VPS comparator](https://www.vpnsmith.com/en/blog/contabo-vs-hetzner-vs-ovh-vps-vpn-2026?src=github&ref=gh-awesome-self-host).
 
 ## Setup tutorials
 
@@ -74,12 +72,10 @@ Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpn
 |--------|-------|
 | [VPNSmith config templates](https://www.vpnsmith.com/en/blog/wireguard-config-templates-2026?src=github&ref=gh-awesome-self-host) | Server + client examples for home VPN, travel VPN, kill-switch strict, multi-peer |
 | [WireGuard wiki - example configs](https://www.wireguard.com/quickstart/) | Minimal upstream examples |
-| [Awesome WireGuard configs](https://github.com/awesome-wireguard/configs) | Community curated configs |
 
 ## Kill switches
 
 - [VPNSmith, Linux VPN kill switch with iptables + systemd](https://www.vpnsmith.com/en/blog/vpn-killswitch-linux-iptables-systemd?src=github&ref=gh-awesome-self-host), production-grade systemd-ordered drop policy
-- [killswitch (script)](https://github.com/Nyr/killswitch), minimal bash kill-switch
 
 ## Monitoring & observability
 
@@ -138,7 +134,6 @@ Detailed pricing + RAM/CPU comparison: [VPNSmith VPS comparator](https://www.vpn
 - [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted), broad self-hosting alternatives
 - [awesome-vpn-leak-detection](https://github.com/ricco020/awesome-vpn-leak-detection), testing your VPN once deployed
 - [awesome-privacy](https://github.com/Lissy93/awesome-privacy), broader privacy stack
-- [awesome-shadowsocks](https://github.com/shadowsocks/awesome-shadowsocks), obfuscation focus
 - [awesome-hardening](https://github.com/decalage2/awesome-security-hardening), server hardening
 
 ## Contributing
@@ -149,7 +144,7 @@ The criteria for inclusion:
 - Tool, paper, or resource directly related to **self-hosting** a VPN (not commercial VPN reviews, those go in `awesome-privacy`)
 - Open-source preferred (closed-source flagged explicitly)
 - Active maintenance (last release < 2 years) OR seminal documentation
-- No affiliate spam, VPS providers are listed objectively; affiliate disclosures, when relevant, are made on the linked tutorial pages, not in this list
+- No affiliate spam, VPS providers are listed objectively. Affiliate disclosures, when relevant, are made on the linked tutorial pages, not in this list
 
 ## License
 
